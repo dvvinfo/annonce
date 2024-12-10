@@ -1,0 +1,37 @@
+@import "normalize.css";
+@import "variables.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #000000;
+  --black-bg: #020305;
+  --gray: #b3b3b3;
+  --white: #fff;
+}
+body {
+  font-family: "Arial Regular", sans-serif;
+  font-weight: 400;
+}
+#app {
+  position: relative;
+}
+
+@font-face {
+  font-family: "Arial Regular";
+  src: url("../fonts/ArialMT.eot");
+  src: url("../fonts/ArialMT.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ArialMT.woff") format("woff"),
+    url("../fonts/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import "sidebar.scss";
+@import "cover-section.scss";
+@import "header.scss";
+@import "product-cards-section.scss";
+@import "soon-section.scss";
+@import "footer.scss";

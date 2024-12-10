@@ -1,0 +1,32 @@
+.header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+    padding-top: 86px;
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:  0 106px;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    &-btn{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    &-icons{
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+}
+.active-link{
+    font-weight: 700;
+}

@@ -1,0 +1,93 @@
+.soon{
+    background-color: var(--black-bg);
+    color: var(--white);
+    &-title{
+        text-align: center;
+        padding: 12px 0;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+    &-carousel{
+        height: 100%;
+        background-color: transparent;
+    }
+    &-carousel-slide{
+        position: relative;
+        background-color: #fff;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+       
+    }
+    &-carousel-info{
+        position: absolute;
+        left: 116px;
+        bottom: 113px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        
+        &__title{
+            margin: 0;
+            font-size: 50px;
+            line-height: 57.5px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        &__link{
+            color: var(--white);
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+    }
+    &-carousel-btn-prev{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 51px;
+        cursor: pointer;
+        z-index: 99;
+        &:disabled{
+            opacity: 0.5;
+        }
+        
+    }
+    &-carousel-btn-next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 51px;
+        cursor: pointer;
+        z-index: 99;
+        
+    }
+    &-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: var(--white);
+        &__img{
+            max-width: 810px;
+            width: 100%;
+            height: 100%;
+            img{
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
