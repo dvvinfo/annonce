@@ -18,7 +18,8 @@
       <div class="sidebar">
         <div class="sidebar-container">
         <div class="sidebar-logo">
-          <svg
+          <button class="sidebar-btn">
+          <svg 
             width="28"
             height="30"
             viewBox="0 0 28 30"
@@ -40,7 +41,8 @@
               stroke="black"
             />
           </svg>
-          <img src="../../src/img/icons/logo-black.svg" alt="logo" />
+          </button>
+          <img src="/images/icons/logo-black.svg" alt="logo" />
         </div>
         <nav class="sidebar-nav">
           <ul class="sidebar-nav__list">
@@ -118,13 +120,14 @@
                 </svg>
               </button>
               <div class="header-logo">
-                <img src="../../src/img/icons/logo.svg" alt="logo" />
+                <img class="header-logo-white" src="/images/icons/logo.svg" alt="logo" />
+                <img class="header-logo-black" src="/images/icons/logo-black.svg" alt="logo" />
               </div>
             </div>
             <!-- header icons -->
             <div class="header-icons">
               <svg
-                class="header-icon"
+                class="header-icon-search"
                 width="19"
                 height="19"
                 viewBox="0 0 19 19"
@@ -140,7 +143,7 @@
                 />
               </svg>
               <svg
-                class="header-icon"
+                class="header-icon-user"
                 width="18"
                 height="19"
                 viewBox="0 0 18 19"
@@ -166,7 +169,7 @@
               </svg>
 
               <svg
-                class="header-icon"
+                class="header-icon-card"
                 width="14"
                 height="18"
                 viewBox="0 0 14 18"
@@ -194,7 +197,7 @@
                 />
               </svg>
               <svg
-                class="header-icon"
+                class="header-icon-star"
                 width="18"
                 height="17"
                 viewBox="0 0 18 17"
@@ -218,7 +221,11 @@
               <!-- Slides -->
               <div class="swiper-slide">
                 <div class="cover-carousel-slide">
-                  <img src="../../src/img/1.png" alt="" />
+                  <picture class="cover-carousel-slide__desktop">
+                    <source srcset="/images/1-mobile.png" media="(max-width: 580px)">
+                    <source srcset="/images/1.png" media="(min-width: 581px)">
+                    <img src="/images/1.png" alt="Responsive Image">
+                </picture>
                   <div class="cover-carousel-info">
                     <h3 class="cover-carousel-info__title">
                       Be feminiNe - choose us
@@ -229,12 +236,32 @@
               </div>
               <div class="swiper-slide">
                 <div class="cover-carousel-slide">
-                  <img src="../../src/img/1.png" alt="" />
+                  <picture class="cover-carousel-slide__desktop">
+                    <source srcset="/images/1-mobile.png" media="(max-width: 580px)">
+                    <source srcset="/images/1.webp" media="(min-width: 581px)">
+                    <img src="/images/1.webp" alt="Responsive Image">
+                </picture>
+                <div class="cover-carousel-info">
+                  <h3 class="cover-carousel-info__title">
+                    Be feminiNe - choose us
+                  </h3>
+                  <a href="#" class="cover-carousel-info__link">LOOK ALL </a>
+                </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="cover-carousel-slide">
-                  <img src="../../src/img/1.png" alt="" />
+                  <picture class="cover-carousel-slide__desktop">
+                    <source srcset="/images/1-mobile.png" media="(max-width: 580px)">
+                    <source srcset="/images/1.webp" media="(min-width: 581px)">
+                    <img src="/images/1.webp" alt="Responsive Image">
+                </picture>
+                <div class="cover-carousel-info">
+                  <h3 class="cover-carousel-info__title">
+                    Be feminiNe - choose us
+                  </h3>
+                  <a href="#" class="cover-carousel-info__link">LOOK ALL </a>
+                </div>
                 </div>
               </div>
               ...
@@ -287,10 +314,16 @@
         </div>
       </section>
       <section class="product-cards">
-        <div class="product-cards-container">
-          <div class="product-card">
+        <div class="swiper product-cards-carousel">
+        <div class="product-cards-container swiper-wrapper ">
+          <div class="swiper-slide product-card">
             <div class="product-card__img">
-              <img src="../../src/img/2.png" alt="" />
+             
+              <picture >
+                <source srcset="/images/2.png" media="(max-width: 580px)">
+                <source srcset="/images/2-mobile.png" media="(min-width: 581px)">
+                <img src="/images/2.png" alt="Responsive Image">
+            </picture>
             </div>
             <div class="product-card-footer">
               <div class="product-card-info">
@@ -313,9 +346,13 @@
               </div>
             </div>
           </div>
-          <div class="product-card">
+          <div class="swiper-slide product-card">
             <div class="product-card__img">
-              <img src="../../src/img/2.png" alt="" />
+              <picture >
+                <source srcset="/images/2.png" media="(max-width: 580px)">
+                <source srcset="/images/2-mobile.png" media="(min-width: 581px)">
+                <img src="/images/2.png" alt="Responsive Image">
+            </picture>
             </div>
             <div class="product-card-footer">
               <div class="product-card-info">
@@ -338,9 +375,13 @@
               </div>
             </div>
           </div>
-          <div class="product-card">
+          <div class="swiper-slide product-card">
             <div class="product-card__img">
-              <img src="../../src/img/2.png" alt="" />
+              <picture >
+                <source srcset="/images/2.png" media="(max-width: 580px)">
+                <source srcset="/images/2-mobile.png" media="(min-width: 581px)">
+                <img src="/images/2.png" alt="Responsive Image">
+            </picture>
             </div>
             <div class="product-card-footer">
               <div class="product-card-info">
@@ -364,6 +405,21 @@
             </div>
           </div>
         </div>
+        <div class="product-cards-carousel-btn-prev">
+          <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.08813 19.0001L0.999906 10" stroke="#020305" stroke-linecap="round"/>
+            <path d="M1.00024 10.0001L3.08847 1.00002" stroke="#020305" stroke-linecap="round"/>
+            </svg>
+            
+        </div>
+        <div class="product-cards-carousel-btn-next">
+          <svg width="4" height="20" viewBox="0 0 4 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.911621 19.0001L2.99985 10" stroke="#020305" stroke-linecap="round"/>
+            <path d="M2.99951 10.0001L0.911283 1.00002" stroke="#020305" stroke-linecap="round"/>
+            </svg>
+            
+        </div>
+      </div>
       </section>
       <section class="soon">
         <h2 class="soon-title">SOON</h2>
@@ -373,7 +429,12 @@
             <!-- Slides -->
             <div class="swiper-slide">
               <div class="soon-carousel-slide">
-                <img src="../../src/img/slider-2.png" alt="" />
+                
+                <picture >
+                  <source srcset="/images/12.png" media="(max-width: 580px)">
+                  <source srcset="/images/slider-2.webp" media="(min-width: 581px)">
+                  <img src="/images/slider-2.webp" alt="Responsive Image">
+              </picture>
                 <div class="soon-carousel-info">
                   <h3 class="soon-carousel-info__title">FASHION SHOW</h3>
                   <span class="soon-carousel-info__link"
@@ -384,7 +445,11 @@
             </div>
             <div class="swiper-slide">
               <div class="soon-carousel-slide">
-                <img src="../../src/img/slider-2.png" alt="" />
+                <picture >
+                  <source srcset="/images/12.png" media="(max-width: 580px)">
+                  <source srcset="/images/slider-2.webp" media="(min-width: 581px)">
+                  <img src="/images/slider-2.webp" alt="Responsive Image">
+              </picture>
               </div>
               <div class="soon-carousel-info">
                 <h3 class="soon-carousel-info__title">FASHION SHOW</h3>
@@ -395,7 +460,11 @@
             </div>
             <div class="swiper-slide">
               <div class="soon-carousel-slide">
-                <img src="../../src/img/slider-2.png" alt="" />
+                <picture >
+                  <source srcset="/images/12.png" media="(max-width: 580px)">
+                  <source srcset="/images/slider-2.webp" media="(min-width: 581px)">
+                  <img src="/images/slider-2.webp" alt="Responsive Image">
+              </picture>
               </div>
               <div class="soon-carousel-info">
                 <h3 class="soon-carousel-info__title">FASHION SHOW</h3>
@@ -456,12 +525,12 @@
         </div>
         <div class="soon-container">
           <div class="soon-container__item">
-            <img src="../../src/img/voali2.webp" alt="" />
+            <img src="/images/voali2.webp" alt="" />
           </div>
           <div class="soon-container__card">
             <div class="product-card">
               <div class="product-card__img">
-                <img src="../../src/img/5FF6A0C.png" alt="" />
+                <img src="/images/5FF6A0C.png" alt="" />
               </div>
               <div class="product-card-footer">
                 <div class="product-card-info">
@@ -608,9 +677,9 @@
             <span class="footer-bottom-item__text">Все права защищены</span>
           </div>
           <div class="footer-bottom-item">
-            <img src="../../src/img/icons/Group-logo.svg" alt="" />
+            <img src="/images/icons/Group-logo.svg" alt="" />
           </div>
-          <div class="footer-bottom-item">
+          <div class="footer-bottom-item arrow">
             <svg
               width="8"
               height="30"

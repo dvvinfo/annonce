@@ -1,32 +1,100 @@
-.header{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 3;
-    padding-top: 86px;
-    &-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding:  0 106px;
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  padding-top: 86px;
+  @media screen and (max-width: 768px) {
+    padding: 16px 0;
+    background-color: var(--white);
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 106px;
+    @media screen and (max-width: 768px) {
+      padding: 0 9px;
     }
-    &-item{
-        display: flex;
-        align-items: center;
-        gap: 32px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @media screen and (max-width: 768px) {
+      gap: 17px;
     }
-    &-btn{
-        background: none;
-        border: none;
-        cursor: pointer;
+  }
+  &-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    svg {
+      @media screen and (max-width: 768px) {
+        width: 21px;
+      }
     }
-    &-icons{
-        display: flex;
-        align-items: center;
-        gap: 28px;
+    svg line {
+      @media screen and (max-width: 768px) {
+        stroke: var(--gray-svg);
+      }
     }
+  }
+  &-icons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  &-logo-black {
+    display: none;
+    width: 67px;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  &-logo-white {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &-icon-search path {
+    @media screen and (max-width: 768px) {
+      fill: var(--gray-svg);
+    }
+  }
 }
-.active-link{
-    font-weight: 700;
+.active-link {
+  font-weight: 700;
+}
+
+.header-icon-search circle {
+  @media screen and (max-width: 768px) {
+    stroke: var(--gray-svg);
+  }
+}
+.header-icon-search path {
+  @media screen and (max-width: 768px) {
+    stroke: var(--gray-svg);
+  }
+}
+.header-icon-user path {
+  @media screen and (max-width: 768px) {
+    fill: var(--gray-svg);
+  }
+}
+.header-icon-card path {
+  @media screen and (max-width: 768px) {
+    stroke: var(--gray-svg);
+  }
+}
+.header-icon-card rect {
+  @media screen and (max-width: 768px) {
+    stroke: var(--gray-svg);
+  }
+}
+.header-icon-star path {
+  @media screen and (max-width: 768px) {
+    stroke: var(--gray-svg);
+  }
 }
